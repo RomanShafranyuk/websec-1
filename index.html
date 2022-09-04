@@ -6,20 +6,20 @@
     <script type="text/javascript" src="script.js"></script>
 </head>
 
-<body>
+<body class="background">
     <div>
-        <input type="text" id="input_left_number"> 
-        <select>
+        <input type="text" id="input_left_number" class="viewElement">
+        <select id="selectOperation" class="viewElement">
             <option value="plus">+</option>
             <option value="minus">-</option>
             <option value="mult">*</option>
             <option value="div">/</option>
         </select>
-        <input type="text" id="input_right_number">
+        <input type="text" id="input_right_number" class="viewElement">
 
     </div>
-    <button id="button_count">подсчитать</button>
-    <textarea id="results"></textarea>
+    <button id="button_count" class="viewElement" onClick="buttonClickCalculate();">подсчитать</button>
+    <textarea id="results" class="viewElement size"></textarea>
 </body>
 
 </html>
