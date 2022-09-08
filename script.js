@@ -3,7 +3,6 @@ function buttonClickCalculate() {
    let prevRes = document.getElementById("results")
 
    let r = document.createElement('div');
-   
    r.innerHTML = prevRes.value;
    
    prevRes.append(r);
