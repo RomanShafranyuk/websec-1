@@ -1,10 +1,18 @@
 function buttonClickCalculate() {
+//    let prevRes = document.getElementById("results").value
+   let prevRes = document.getElementById("results")
+
+   let r = document.createElement('div');
+   
+   r.innerHTML = prevRes.value;
+   
+   prevRes.append(r);
+   
     let selectOperation = document.getElementById("selectOperation");
-    console.log(selectOperation.value);
+  
     let lValue = parseFloat(document.getElementById("input_left_number").value);
     let rValue = parseFloat(document.getElementById("input_right_number").value);
-    console.log(lValue)
-    console.log(rValue)
+   
 
     let resultOutput = lValue + " " + selectOperation.value + " " + rValue + " = ";
     let result = 0.0;
@@ -29,10 +37,11 @@ function buttonClickCalculate() {
             break;
     }
 
-    console.log(selectOperation.value);
-    console.log(result)
+   
+   
 
-    resultOutput += result;
-
-    document.getElementById("results").innerText = resultOutput;
+    resultOutput += result +"\n";
+    
+    document.getElementById("results").innerHTML = prevRes.value + resultOutput;
+    
 }

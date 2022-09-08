@@ -8,6 +8,14 @@
     min-height: 50px;
 }
 
+.topBlock{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
 #button_count{
     margin: 0 auto;
     display: block;
@@ -17,6 +25,10 @@
     background-color: palegreen;
 }
 
+.sizeInput{
+    width: 40%;
+}
 .size{
     width: 100%;
+   height: fit-content;
 }
