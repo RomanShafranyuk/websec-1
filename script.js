@@ -3,10 +3,13 @@ function buttonClickCalculate() {
    let prevRes = document.getElementById("results")
 
    let r = document.createElement('div');
+   
    r.innerHTML = prevRes.value;
-   
-   prevRes.append(r);
-   
+   // console.log(r);
+   r.setAttribute('style', 'color: "blue"');
+   //prevRes.appendChild(r);
+   //console.log(prevRes);
+//    el.innerHTML = `<span>Hello world</span>`;
     let selectOperation = document.getElementById("selectOperation");
   
     let lValue = parseFloat(document.getElementById("input_left_number").value);
@@ -40,7 +43,10 @@ function buttonClickCalculate() {
    
 
     resultOutput += result +"\n";
-    
-    document.getElementById("results").innerHTML = prevRes.value + resultOutput;
+    console.log(prevRes.value)
+    console.log(r);
+    document.getElementById("results").append(r)
+    console.log(document.getElementById("results"));
+    document.getElementById("results").innerHTML = resultOutput
     
 }

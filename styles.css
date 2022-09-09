@@ -2,7 +2,7 @@
     margin: 10px auto;
     border-radius: 8px;
     border-color: orangered;
-    color: orangered;
+    /* color: orangered; */
     background-color: palegreen;
     border-style: dotted;
     min-height: 50px;
