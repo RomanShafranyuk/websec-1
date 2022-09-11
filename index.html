@@ -8,19 +8,22 @@
 
 <body class="background">
     <div>
-    <div class="topBlock">
-        <input type="text" id="input_left_number" class="viewElement sizeInput">
-        <select id="selectOperation" class="viewElement">
-            <option value="plus">+</option>
-            <option value="minus">-</option>
-            <option value="mult">*</option>
-            <option value="div">/</option>
-        </select>
-        <input type="text" id="input_right_number" class="viewElement sizeInput">
+        <div class="topBlock">
+            <input type="text" id="input_left_number" class="viewElement sizeInput">
+            <select id="selectOperation" class="viewElement">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="text" id="input_right_number" class="viewElement sizeInput">
         </div>
     </div>
     <button id="button_count" class="viewElement" onClick="buttonClickCalculate();">подсчитать</button>
-    <textarea id="results" class="viewElement size"></textarea>
+    <div id="resultsText" class="viewElement">
+        <p id="prevRes"></p>
+        <p id="result"></p>
+    </div>
 </body>
 
 </html>

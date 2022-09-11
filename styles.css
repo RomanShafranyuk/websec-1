@@ -1,34 +1,39 @@
-.viewElement{
+.viewElement {
     margin: 10px auto;
     border-radius: 8px;
     border-color: orangered;
-    /* color: orangered; */
+    color: orangered;
     background-color: palegreen;
     border-style: dotted;
     min-height: 50px;
 }
 
-.topBlock{
-    display: flex ;
+.topBlock {
+    display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 
-#button_count{
+#button_count {
     margin: 0 auto;
     display: block;
 }
 
-.background{
+#selectOperation {
+    width: 18%;
+}
+
+.background {
     background-color: palegreen;
 }
 
-.sizeInput{
+.sizeInput {
     width: 40%;
 }
-.size{
-    width: 100%;
-   height: fit-content;
+
+
+#prevRes {
+    opacity: 0.4;
 }

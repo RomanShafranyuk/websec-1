@@ -1,34 +1,30 @@
 function buttonClickCalculate() {
-//    let prevRes = document.getElementById("results").value
-   let prevRes = document.getElementById("results")
-
-   let r = document.createElement('div');
-   
-   r.innerHTML = prevRes.value;
-   // console.log(r);
-   r.setAttribute('style', 'color: "blue"');
-   //prevRes.appendChild(r);
-   //console.log(prevRes);
-//    el.innerHTML = `<span>Hello world</span>`;
     let selectOperation = document.getElementById("selectOperation");
-  
     let lValue = parseFloat(document.getElementById("input_left_number").value);
     let rValue = parseFloat(document.getElementById("input_right_number").value);
-   
+
+    if (isNaN(lValue) || isNaN(rValue)) {
+        alert("Поля ввода не должны быть пустыми!");
+        return;
+    }
+
+    let prevResField, resField;
+    prevResField = document.getElementById("prevRes");
+    resField = document.getElementById("result");
 
     let resultOutput = lValue + " " + selectOperation.value + " " + rValue + " = ";
     let result = 0.0;
     switch (selectOperation.value) {
-        case "plus":
+        case "+":
             result = lValue + rValue;
             break;
-        case "minus":
+        case "-":
             result = lValue - rValue;
             break;
-        case "mult":
+        case "*":
             result = lValue * rValue;
             break;
-        case "div":
+        case "/":
             if (rValue === 0) {
                 resultOutput = "Ошибка: деление на ноль";
                 result = "";
@@ -39,14 +35,14 @@ function buttonClickCalculate() {
             break;
     }
 
-   
-   
 
-    resultOutput += result +"\n";
-    console.log(prevRes.value)
-    console.log(r);
-    document.getElementById("results").append(r)
-    console.log(document.getElementById("results"));
-    document.getElementById("results").innerHTML = resultOutput
-    
+
+
+    resultOutput += result;
+
+    prevResField.innerText = resField.innerText;
+    resField.innerText = resultOutput;
+
+
+
 }
